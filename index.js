@@ -26,6 +26,7 @@ let persons = [
 ]
 const app = express()
 app.use(express.static('build'))
+app.use(cors())
 // middle that transforms body into an object
 app.use(bodyParser.json())
 
