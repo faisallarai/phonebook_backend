@@ -125,6 +125,8 @@ app.get('/info', (request, response) => {
     response.end(`<p>Phonebook has info for ${total} people</p><p>${Date()}</p>`)
 })
 
-const port = 3001
-app.listen(port)
-console.log(`Server running on ${port}`)
+const port = process.env.PORT || 3001
+
+app.listen(port, () => {
+    console.log(`Server running on ${port}`)
+})
